@@ -18,7 +18,7 @@ public class menuController {
 	@RequestMapping("/menu")
 	@ResponseBody
 	public List<Menu> selMenu() {
-		System.out.println("xixi");
+		System.out.println("xi1xi");
 		return menuServiceImpl.selAll() ;
 	}
 }
