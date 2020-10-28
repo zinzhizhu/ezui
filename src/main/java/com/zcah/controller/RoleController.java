@@ -17,8 +17,8 @@ public class RoleController {
 
 	@RequestMapping("page/showRole")
 	@ResponseBody
-	public EasyUIDatagrid showRole(@RequestParam(defaultValue = "10") int pageSize,
-			@RequestParam(defaultValue = "1") int pageNumber) {
-		return roleServiceImpl.showRole(pageSize, pageNumber);
+	public EasyUIDatagrid showRole(@RequestParam(defaultValue = "2") int rows,
+			@RequestParam(defaultValue = "1") int page) {
+		return roleServiceImpl.showRole(rows, page);
 	}
 }
