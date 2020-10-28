@@ -15,13 +15,10 @@ import com.zcah.service.menuService;
 public class menuController {
 	@Resource
 	private menuService menuServiceImpl;
+
 	@RequestMapping("/menu")
 	@ResponseBody
 	public List<Menu> selMenu() {
-
-		System.out.println("xi1xi");
-
-
-		return menuServiceImpl.selAll() ;
+		return menuServiceImpl.selAll();
 	}
 }

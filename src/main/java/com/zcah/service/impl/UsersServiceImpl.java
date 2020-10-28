@@ -1,5 +1,7 @@
 package com.zcah.service.impl;
 
+import java.util.Random;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -16,5 +18,12 @@ public class UsersServiceImpl implements UsersService {
 	@Override
 	public Users login(Users users) {
 		return userMapper.login(users);
+	}
+	public static void main(String[] args) {
+		Random random =new Random();
+		
+		for (int i = 0; i <50; i++) {
+			System.out.println(random.nextInt(2)+1);
+		}
 	}
 }
