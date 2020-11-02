@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-privilege.jsp
+<form action="" method="post" id="role_privilege_form">
+
+<input type="hidden" name="id">
+角色名称 <input type="text" name="" >角色排序ID:<input type="text" name="">
+
+</form>
+
 </body>
 </html>

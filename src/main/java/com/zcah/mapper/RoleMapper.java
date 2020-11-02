@@ -3,6 +3,7 @@ package com.zcah.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.zcah.pojo.Role;
 
@@ -12,4 +13,8 @@ public interface RoleMapper {
 
 	@Select("select count(*) from role")
 	int selCount();
+	
+	
+	@Update("update role set name=#{name},sort=#{sort},remark=#{remark} where id=#{id}")
+	int updRole(Role role);
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.zcah.mapper.RoleMapper;
 import com.zcah.pojo.EasyUIDatagrid;
+import com.zcah.pojo.Role;
 import com.zcah.service.RoleServicce;
 @Service
 public class RoleServiceImpl implements RoleServicce{
@@ -19,6 +20,11 @@ public class RoleServiceImpl implements RoleServicce{
 		dg.setRows(reloMapper.selByPage(pageSize*(pageNumber-1), pageSize));
 		dg.setTotal(reloMapper.selCount());
 		return dg;
+	}
+	@Override
+	public int update(Role role) {
+		// TODO Auto-generated method stub
+		return reloMapper.updRole(role);
 	}
 
 }

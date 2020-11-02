@@ -8,17 +8,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zcah.pojo.EasyUIDatagrid;
+import com.zcah.pojo.Role;
 import com.zcah.service.RoleServicce;
 
 @Controller
+@RequestMapping("page")
 public class RoleController {
 	@Resource
 	private RoleServicce roleServiceImpl;
 
-	@RequestMapping("page/showRole")
+	@RequestMapping("showRole")
 	@ResponseBody
 	public EasyUIDatagrid showRole(@RequestParam(defaultValue = "2") int rows,
 			@RequestParam(defaultValue = "1") int page) {
 		return roleServiceImpl.showRole(rows, page);
+	}
+	
+	@RequestMapping("updataRole")
+	@ResponseBody
+	public int 	update(Role role) {
+		System.out.println(role);
+		return roleServiceImpl.update(role);
 	}
 }
