@@ -4,7 +4,7 @@ public class Role {
 	private int id;
 	private String name;
 	private int sort;
-	private String remark;
+	private String  remark;
 	@Override
 	public String toString() {
 		return "Role [id=" + id + ", name=" + name + ", sort=" + sort + ", remark=" + remark + "]";
