@@ -13,8 +13,15 @@ public class Menu {
 	private String filename;
 	private int pid;
 	private List<Menu> children;
+	private boolean checked;
 
 	
+	public boolean isChecked() {
+		return checked;
+	}
+	public void setChecked(boolean checked) {
+		this.checked = checked;
+	}
 	public String getFilename() {
 		return filename;
 	}

@@ -19,8 +19,17 @@
 			    modal: true,
 			    onLoad:function(){
 			    	$("#role_privilege_form :hidden:eq(0)").val($(obj).parent().parent().siblings().children().html());
-			    }	
+			    	$('#privilege_tree').tree({
+			    	    url:'showPrivilege?id='+$("#role_privilege_form :hidden:eq(0)").val(),
+			    	    checkbox:true
+			    	    
+			    	});
+			    	
+			    },
+			    
+		
 		});
+	
 	}
 		$(function() {
 			$('#role_table').datagrid(

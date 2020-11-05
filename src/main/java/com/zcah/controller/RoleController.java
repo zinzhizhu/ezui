@@ -1,5 +1,7 @@
 package com.zcah.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zcah.pojo.EasyUIDatagrid;
+import com.zcah.pojo.Menu;
 import com.zcah.pojo.Role;
 import com.zcah.service.RoleServicce;
 
@@ -29,5 +32,10 @@ public class RoleController {
 	public int 	update(Role role) {
 		System.out.println(role);
 		return roleServiceImpl.update(role);
+	}
+	@RequestMapping("showPrivilege")
+	@ResponseBody
+	public List<Menu> showPrivilege(int id){
+		return roleServiceImpl.showPrivilege(id);
 	}
 }
